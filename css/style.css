@@ -7,24 +7,59 @@ html,body{
     height: 100%;
     font-family: 'Ubuntu', sans-serif;
 }
-.bg-color-slate
+a{
+    text-decoration: none;
+    color:#494953 ;
+}
+h5
 {
-    background-color: #EDF2F6;
+    color:#494953;
+}
+.bg-red
+{
+    background-color: #FF5656  !important;
+}
+.bg-slate
+{
+    background-color: #EDF2F6 !important;
+}
+.bg-blue
+{
+    background-color: #6A7EFC !important;
+}
+.bg-green
+
+{
+   
+    background-color: #77D970 !important;
 }
 .mynav li a {
-    color: #fff;
+    color:#494953;
     text-decoration: none;
     width: 100%;
     display: block;
-    border-radius: 5px;
     padding: 8px 5px;
 }
 
 .mynav li a.active{
-    color: rgb(38, 38, 38);
+    color: rgb(0, 0, 0) !important;
+    font-weight: bold;
+    font-size: larger   ;
 }
 
 .mynav li a i{
     width: 25px;
     text-align: center;
 }
+
+.link-card
+{
+    width:23%;
+}
+
+@media (max-width: 500px) {
+    .link-card {
+      width: 100% !important; 
+        margin-bottom: 1rem;
+    }
+  }
