@@ -1,0 +1,30 @@
+/* Red :  #FF5656 
+   White : #EDF2F6
+   Blue : #6A7EFC
+   Black : #494953 
+*/
+html,body{
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+}
+.bg-color-slate
+{
+    background-color: #EDF2F6;
+}
+.mynav li a {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    padding: 8px 5px;
+}
+
+.mynav li a.active{
+    color: rgb(38, 38, 38);
+}
+
+.mynav li a i{
+    width: 25px;
+    text-align: center;
+}
