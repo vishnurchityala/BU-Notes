@@ -6,7 +6,6 @@ Welcome to **BU-Notes**, a comprehensive website designed to provide all the res
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
