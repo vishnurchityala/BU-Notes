@@ -56,6 +56,11 @@ h5
 {
     width:23%;
 }
+.link-card-a
+{
+    width:100%;
+
+}
 
 @media (max-width: 500px) {
     .link-card {
