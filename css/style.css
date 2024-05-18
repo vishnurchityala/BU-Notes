@@ -62,9 +62,21 @@ h5
 
 }
 
+.file-tile
+{
+    width:65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
 @media (max-width: 500px) {
     .link-card {
       width: 100% !important; 
         margin-bottom: 1rem;
+    }
+    .file-tile
+    {
+        width:100%;
     }
   }
