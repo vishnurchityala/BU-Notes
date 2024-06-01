@@ -1,0 +1,162 @@
+/* Red :  #FF5656 
+   Slate : #EDF2F6
+   Blue : #6A7EFC
+   Black : #494953 
+*/
+
+html,body 
+{
+   height: 100%;
+   background-color:#f2f8fbe0 ;
+}
+a
+{
+   text-decoration: none;
+   color:#494953;
+   user-select: none;
+}
+
+p, h1, h2, h3, h4, h5, h6, img
+{
+   user-select: none;
+}
+
+.bg-slate
+{
+   background-color: #f8fbfd !important;
+}
+
+.nav-link:hover
+{
+   background-color:#49495314;
+}
+.active
+{
+   background-color:#c9e8ff  ;
+}
+
+.content-area
+{
+   background-color: white; 
+   overflow-y: scroll; 
+   border-radius: 20px;
+}
+
+.file-list-tile
+{
+   width: 60%;
+   border-bottom: 1px solid #494953b3;
+}
+.file-list-tile:hover
+{
+   background-color:#f2f9ff ;
+}
+
+.file-tile{
+   margin-bottom:1rem;
+}
+.file-tile:hover
+{
+   background-color: #f2f9ff !important;
+   border: 0.1px solid #c9e8ff;
+}
+.download-button:hover
+{
+   background-color:#49495314;
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+
+}
+.file-tile > div
+{
+   width:165px;
+}
+.file-tile > div > a > p
+{
+   max-width:100px;
+   text-wrap: nowrap;
+   overflow-x: hidden;
+}
+.page-title
+{
+   font-size:x-large;
+   width:fit-content;
+   padding: 0.4rem 1.2rem;
+   font-weight:500;
+   margin-bottom:1rem;
+   background-color: #f8fbfd;
+   transition: 0.2s ease; 
+}
+
+.page-title:hover
+{
+   background-color: #e5f4ff;
+}
+
+.favourites-tile
+{  
+   min-width: 23.5%;
+   margin-right:0.5rem;
+   background-color: #f8fbfd;
+   padding-left:1.2rem;
+   padding-right:1.2rem;
+   padding-top:1.2rem;
+   padding-bottom:1.2rem;
+   display: flex;
+   margin-bottom:1rem;
+}
+
+.favourites-tile:hover
+{
+   background-color:#f2f9ff ; 
+   border: 0.1px solid #c9e8ff;
+}
+
+.folder-tile
+{  
+   display: flex;
+   flex-direction: column;
+   border-radius: 1rem;
+   background-color: #f8fbfd;
+   padding: 1rem 1.5rem;
+   margin-bottom: 2rem;
+   margin-top: 2rem;
+   height: fit-content;
+}
+
+.folder-tile:hover
+{
+   background-color:#f2f9ff ; 
+   border: 0.1px solid #c9e8ff;
+}
+
+
+@media (max-width: 768px) {
+   .content-area
+   {
+      border-radius: 0px;
+      overflow-y: scroll !important; 
+   }
+   .file-list-tile
+   {
+      width: 90%;
+      border-bottom: 1px solid #494953b3;
+   }
+   .file-tile > div > a > p
+   {
+      max-width:80px;
+      text-wrap: nowrap;
+      overflow-x: hidden;
+   }
+   .file-tile > div
+   {
+      width:145px;
+   }
+   .favourites-tile
+   {
+      width:95%;
+   }
+   .items-space
+   {
+      justify-items: left;
+   }
+ }
