@@ -63,6 +63,7 @@
             <div class="flex-fill ms-md-2 me-md-3 mt-md-4 mb-md-4 content-area py-4 px-1">
                 <!-- Page header -->
                 <a href="./firstYear.html" class="page-title rounded-pill ms-2">1st Year Catalogue</a>
+                <a href="#" id="toggleLinkView" class="page-title rounded-pill ms-2 icon-show"><i class="fa-solid fa-list fs-5"></i></a>
                 <!-- Breadcrumb section -->
                 <div class="d-none d-md-flex ms-2 ms-md-4 gap-1 pe-4 mt-3 mb-2 flex-wrap">
                     <a href="../index.html" class="d-flex p-2 rounded-pill align-items-center button">
@@ -92,7 +93,7 @@
                 </div>
                 
                 <!-- file container -->
-                <div class="d-flex flex-wrap gap-2 gap-md-2 ms-md-4 items-space">
+                <div class="d-flex flex-wrap gap-2 gap-md-2 ms-md-4 items-space folder-view-container">
                     <!-- file tile -->
                     <div class="bg-slate rounded-4 p-2 pb-3 file-tile ms-2 m-md-1 file-tile">
                         <div class="m-0 d-flex p-2 gap-1 align-items-center">
@@ -174,12 +175,11 @@
                         </a>
                     </div>               
                 </div> 
-                <h6 class="ms-4 ms-md-6 mt-4 mb-3">Recently Added</h6>
-                <div class="ps-2 ps-md-0 pe-3 pe-md-0 d-flex flex-column ms-4">
+                <div class="ps-2 ps-md-0 pe-3 mt-3 pe-md-0 d-flex flex-column ms-4 folder-list-container">
                     <!-- file list item tile -->
                     <div class="ms-2 py-2 px-3 d-flex file-list-tile">
                         <a href="" class="d-flex gap-2 align-items-center flex-fill">
-                            <img src="./img/pdf.png" width="18px" style="margin: 0px;" alt="">
+                            <img src="../img/pdf.png" width="18px" style="margin: 0px;" alt="">
                             <p class="m-0 fw-semibold" style="font-size: small;">DMS All slides</p>
                         </a>
                         <a href="" class="ms-auto d-flex button p-2 rounded-pill">
@@ -189,7 +189,7 @@
                     <!-- file list item tile -->
                     <div class="ms-2 py-2 px-3 d-flex file-list-tile">
                         <a href="" class="d-flex gap-2 align-items-center flex-fill">
-                            <img src="./img/pdf.png" width="18px" style="margin: 0px;" alt="">
+                            <img src="../img/pdf.png" width="18px" style="margin: 0px;" alt="">
                             <p class="m-0 fw-semibold" style="font-size: small;">DMS All slides</p>
                         </a>
                         <a href="" class="ms-auto d-flex button p-2 rounded-pill">
@@ -207,5 +207,30 @@
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
     })
+    document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggleLinkView");
+    const folderView = document.querySelector(".folder-view-container");
+    const listView = document.querySelector(".folder-list-container");
+
+    folderView.classList.remove("d-none");
+    listView.classList.add("d-none");
+
+    toggleButton.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        if (folderView.classList.contains("d-none")) {
+            folderView.classList.remove("d-none");
+            listView.classList.add("d-none");
+            toggleButton.innerHTML = '<i class="fa-solid fa-table-cells fs-5"></i>';
+        } else {
+            folderView.classList.add("d-none");
+            listView.classList.remove("d-none");
+            toggleButton.innerHTML = '<i class="fa-solid fa-list fs-5"></i>';
+        }
+    });
+});
+
+
+
 </script>
 </html>
