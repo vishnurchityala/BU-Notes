@@ -146,6 +146,10 @@ p, h1, h2, h3, h4, h5, h6, img
 {
    background-color: #e5f4ff;
 }
+.folder-view-container{
+}
+.folder-list-container{
+}
 
 
 @media (max-width: 768px) {
