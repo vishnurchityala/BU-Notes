@@ -1,25 +1,73 @@
-/* Color Palette
-   Red :  #FF5656 
-   Slate : #EDF2F6
-   Blue : #6A7EFC
-   Black : #494953 
-*/
+/* Root Variables */
+:root {
+  /* Colors */
+  --color-red: #ff5656;
+  --color-slate: #edf2f6;
+  --color-blue: #6a7efc;
+  --color-black: #494953;
+  --color-white: #ffffff;
 
-/* Set the height of html and body to 100% and define background color */
+  /* Background Colors */
+  --bg-primary: #f2f8fbe0;
+  --bg-slate: #f8fbfd;
+  --bg-hover: #49495314;
+  --bg-active: #c9e8ff;
+  --bg-search: #e1e4e9;
+  --bg-hover-file: #f2f9ff;
+
+  /* Border Colors */
+  --border-transparent: #494953b3;
+  --border-hover: #c9e8ff;
+
+  /* Spacing */
+  --spacing-xs: 0.2rem;
+  --spacing-sm: 0.4rem;
+  --spacing-md: 0.8rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.2rem;
+  --spacing-xxl: 1.5rem;
+  --spacing-xxxl: 2rem;
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.25rem;
+  --radius-pill: 50px;
+
+  /* Font Sizes */
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-md: 1rem;
+  --font-lg: 1.25rem;
+  --font-xl: 1.5rem;
+
+  /* Shadows */
+  --shadow-hover: 5px 5px 5px rgba(0, 0, 0, 0.05);
+
+  /* Transitions */
+  --transition-default: 0.2s ease;
+
+  /* Layout */
+  --sidebar-width: 250px;
+  --file-tile-width: 165px;
+  --file-text-width: 100px;
+}
+
+/* Base Styles */
 html,
 body {
   height: 100%;
-  background-color: #f2f8fbe0; /* Light background color */
+  background-color: var(--bg-primary);
 }
 
 /* Link styles */
 a {
-  text-decoration: none; /* Remove underline from links */
-  color: #494953; /* Set link color to dark gray */
-  user-select: none; /* Prevent text selection on links */
+  text-decoration: none;
+  color: var(--color-black);
+  user-select: none;
 }
 
-/* Disable text selection for certain elements */
+/* Text selection prevention */
 p,
 h1,
 h2,
@@ -28,206 +76,272 @@ h4,
 h5,
 h6,
 img {
-  user-select: none; /* Prevent text selection */
+  user-select: none;
 }
 
-/* Set background color for elements with the class 'bg-slate' */
+/* Background utilities */
 .bg-slate {
-  background-color: #f8fbfd !important; /* Light slate background */
+  background-color: var(--bg-slate) !important;
 }
 
-/* Change background color of nav-links on hover */
+/* Navigation styles */
 .nav-link:hover {
-  background-color: #49495314; /* Light gray background on hover */
+  background-color: var(--bg-hover);
 }
 
-/* Active class for currently selected links */
 .active {
-  background-color: #c9e8ff; /* Light blue background for active link */
+  background-color: var(--bg-active);
 }
 
-/* Content area styles */
+/* Content area */
 .content-area {
-  background-color: white; /* White background for content area */
-  overflow-y: scroll; /* Enable vertical scrolling */
-  border-radius: 20px; /* Rounded corners */
+  background-color: var(--color-white);
+  overflow-y: scroll;
+  border-radius: var(--radius-lg);
 }
 
-/* Styles for file list tiles */
+/* Search and App Buttons Layout */
+.sea {
+  display: flex;
+  width: 100%;
+  padding: 0 var(--spacing-xxl);
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  min-height: 50px; /* Ensure minimum height for the container */
+}
+
+.search-container {
+  width: 50%;
+  min-width: 300px; /* Minimum width for search container */
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-search);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  width: 100%;
+  height: 48px;
+}
+
+.search-box input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding: 4px 8px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.search-box button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px;
+  flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+.appButtonsContainer {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0; /* Prevent container from shrinking */
+}
+
+.app-buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.app-buttons i,
+.app-buttons img {
+  margin-left: var(--spacing-lg);
+  cursor: pointer;
+  font-size: var(--font-xl);
+  flex-shrink: 0; /* Prevent icons from shrinking */
+}
+
+.app-buttons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* Rest of the styles remain the same */
+/* File list styles */
 .file-list-tile {
-  width: 60%; /* Set width of file list tiles */
-  border-bottom: 1px solid #494953b3; /* Bottom border with slight transparency */
+  width: 60%;
+  border-bottom: 1px solid var(--border-transparent);
 }
 
-/* Change background color of file list tiles on hover */
 .file-list-tile:hover {
-  background-color: #f2f9ff; /* Light blue background on hover */
+  background-color: var(--bg-hover-file);
 }
 
 /* File tile styles */
 .file-tile {
-  margin-bottom: 1rem; /* Space below each file tile */
+  margin-bottom: var(--spacing-lg);
 }
 
-/* Change background color of file tiles on hover */
 .file-tile:hover {
-  background-color: #f2f9ff !important; /* Light blue background on hover */
-  border: 0.1px solid #c9e8ff; /* Add a light blue border */
+  background-color: var(--bg-hover-file) !important;
+  border: 0.1px solid var(--border-hover);
 }
 
 /* Button hover effects */
 .button:hover {
-  background-color: #00000016; /* Very light black background on hover */
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow effect */
+  background-color: var(--bg-hover);
+  box-shadow: var(--shadow-hover);
 }
 
-/* Set width for the inner div of file tiles */
+/* File tile inner elements */
 .file-tile > div {
-  width: 165px; /* Fixed width for the inner div */
+  width: var(--file-tile-width);
 }
 
-/* Set styles for paragraph inside anchor tags in file tiles */
 .file-tile > div > a > p {
-  max-width: 100px; /* Maximum width for the text */
-  text-wrap: nowrap; /* Prevent text wrapping */
-  overflow-x: hidden; /* Hide overflow text */
+  max-width: var(--file-text-width);
+  text-wrap: nowrap;
+  overflow-x: hidden;
 }
 
-/* Styles for page title */
+/* Page title styles */
 .page-title {
-  font-size: x-large; /* Large font size */
-  width: fit-content; /* Fit content width */
-  padding: 0.4rem 1.2rem; /* Padding for spacing */
-  font-weight: 500; /* Medium font weight */
-  margin-bottom: 1rem; /* Margin below the title */
-  background-color: #f8fbfd; /* Light slate background */
-  transition: 0.2s ease; /* Smooth transition effect */
+  font-size: var(--font-xl);
+  width: fit-content;
+  padding: var(--spacing-sm) var(--spacing-xl);
+  font-weight: 500;
+  margin-bottom: var(--spacing-lg);
+  background-color: var(--bg-slate);
+  transition: var(--transition-default);
 }
 
-/* Change background color of page title on hover */
 .page-title:hover {
-  background-color: #e5f4ff; /* Light blue background on hover */
+  background-color: var(--bg-active);
 }
 
-/* Styles for favorites tile */
+/* Favourites tile styles */
 .favourites-tile {
-  min-width: 23.5%; /* Minimum width for favorites tile */
-  margin-right: 0.5rem; /* Right margin */
-  background-color: #f8fbfd; /* Light slate background */
-  padding: 1.2rem; /* Uniform padding */
-  display: flex; /* Flexbox for layout */
-  margin-bottom: 1rem; /* Margin below favorites tile */
+  min-width: 23.5%;
+  margin-right: var(--spacing-sm);
+  background-color: var(--bg-slate);
+  padding: var(--spacing-xl);
+  display: flex;
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  box-sizing: border-box;
 }
 
-/* Change background color of favorites tile on hover */
 .favourites-tile:hover {
-  background-color: #f2f9ff; /* Light blue background on hover */
-  border: 0.1px solid #c9e8ff; /* Add a light blue border */
+  background-color: var(--bg-hover-file);
+  border: 0.1px solid var(--border-hover);
 }
 
-/* Styles for folder tile */
+/* Folder styles */
 .folder-tile {
-  display: flex; /* Flexbox for layout */
-  flex-direction: column; /* Arrange items in a column */
-  border-radius: 1rem; /* Rounded corners */
-  background-color: #f8fbfd; /* Light slate background */
-  padding: 1rem 1.5rem; /* Padding for spacing */
-  margin-bottom: 2rem; /* Margin below folder tile */
-  margin-top: 1rem; /* Margin above folder tile */
-  height: fit-content; /* Adjust height based on content */
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-slate);
+  padding: var(--spacing-lg) var(--spacing-xxl);
+  margin-bottom: var(--spacing-xxxl);
+  margin-top: var(--spacing-lg);
+  height: fit-content;
 }
 
-/* Change background color of folder tile on hover */
 .folder-tile:hover {
-  background-color: #f2f9ff; /* Light blue background on hover */
-  border: 0.1px solid #c9e8ff; /* Add a light blue border */
+  background-color: var(--bg-hover-file);
+  border: 0.1px solid var(--border-hover);
 }
 
-/* Styles for folder locator */
 .folder-locator {
-  padding: 0.4rem 0.9rem; /* Padding for spacing */
-  border-radius: 1rem; /* Rounded corners */
-  background-color: #f8fbfd; /* Light slate background */
-  font-weight: 500; /* Medium font weight */
-  width: fit-content; /* Fit content width */
-  margin-top: 0.3rem; /* Margin above folder locator */
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-slate);
+  font-weight: 500;
+  width: fit-content;
+  margin-top: var(--spacing-xs);
 }
 
-/* Change background color of folder locator on hover */
 .folder-locator:hover {
-  background-color: #e5f4ff; /* Light blue background on hover */
+  background-color: var(--bg-active);
 }
 
-/* Empty classes for potential future use */
-.folder-view-container {
-}
-.folder-list-container {
-}
-
-/* Media query for responsive design */
-@media (max-width: 768px) {
-  .content-area {
-    border-radius: 0px; /* Remove border radius on smaller screens */
-    overflow-y: scroll !important; /* Ensure scrolling is enabled */
-  }
-  .file-list-tile {
-    width: 90%; /* Wider file list tiles on smaller screens */
-    border-bottom: 1px solid #494953b3; /* Maintain border style */
-  }
-  .file-tile > div > a > p {
-    max-width: 80px; /* Adjust maximum width for text */
-    text-wrap: nowrap; /* Prevent text wrapping */
-    overflow-x: hidden; /* Hide overflow text */
-  }
-  .file-tile > div {
-    width: 145px; /* Adjust width for the inner div */
-  }
-  .favourites-tile {
-    width: 95%; /* Wider favorites tile on smaller screens */
-  }
-  .items-space {
-    justify-items: left; /* Align items to the left */
-  }
-}
-
-/* tiles fix*/
-.favourites-tile {
-  min-width: 23.5%; /* Original width for desktop and large screens */
-  margin-right: 0.5rem; /* Right margin */
-  background-color: #f8fbfd; /* Light slate background */
-  padding: 1.2rem; /* Uniform padding */
-  display: flex; /* Flexbox for layout */
-  margin-bottom: 1rem; /* Margin below favourites tile */
-  border-radius: 10px; /* Rounded corners */
-  box-sizing: border-box; /* Include padding and border in element's width and height */
-}
-
-/* Hover effect */
-.favourites-tile:hover {
-  background-color: #f2f9ff; /* Light blue background on hover */
-  border: 0.1px solid #c9e8ff; /* Light blue border */
-}
-
-/* Responsive design for medium screens (tablets or smaller) */
+/* Responsive Design */
 @media (max-width: 992px) {
   .favourites-tile {
-    width: 48%; /* Switch to 2 columns on medium screens */
-    margin-right: 2%; /* Small gap between tiles */
+    width: 48%;
+    margin-right: 2%;
   }
 }
 
-/* Responsive design for smaller screens (Mobile) */
 @media (max-width: 768px) {
+  .content-area {
+    border-radius: 0;
+    overflow-y: scroll !important;
+  }
+
+  .sea {
+    padding: 0 15px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 10px; /* Add some space between search and buttons */
+    margin-bottom: 15px;
+  }
+
+  .search-container {
+    width: 64%; /* Maintain half width */
+    min-width: 200px; /* Smaller minimum width for mobile */
+  }
+
+  .file-list-tile {
+    width: 90%;
+  }
+
+  .file-tile > div > a > p {
+    max-width: 80px;
+  }
+
+  .file-tile > div {
+    width: 145px;
+  }
+
   .favourites-tile {
-    width: 48%; /* 2-column layout for mobile */
-    margin-right: 1%; /* Small gap between tiles */
+    width: 48%;
+    margin-right: 1%;
+  }
+
+  .items-space {
+    justify-items: left;
+  }
+
+  .app-buttons i,
+  .app-buttons img {
+    margin-left: 8px; /* Reduce margin between icons */
+    font-size: 20px; /* Slightly smaller icons */
   }
 }
 
-/* Full width on very small screens (mobile portrait mode) */
 @media (max-width: 480px) {
   .favourites-tile {
-    width: 100%; /* Full width for small screens */
-    margin-right: 0; /* Remove right margin on narrow screens */
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .sea {
+    gap: 5px; /* Reduce gap further */
+  }
+
+  .search-container {
+    min-width: 150px; /* Even smaller minimum width */
+  }
+
+  .app-buttons i,
+  .app-buttons img {
+    margin-left: 5px; /* Minimal margin between icons */
+    font-size: 18px; /* Smaller icons */
   }
 }
