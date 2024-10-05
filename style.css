@@ -35,13 +35,13 @@
   /* Background Colors */
   --bg-primary: #f2f8fbe0;
   --bg-slate: #f8fbfd;
-  --bg-hover: #49495314;
+  --bg-hover: #4949532c;
   --bg-active: #c9e8ff;
   --bg-search: #e6ebf2ee;
   --bg-hover-file: #f2f9ff;
 
   /* Border Colors */
-  --border-transparent: #494953b3;
+  --border-transparent: #7676861d;
   --border-hover: #c9e8ff;
 
   /* Spacing */
