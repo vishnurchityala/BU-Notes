@@ -1,184 +1,233 @@
-/* Red :  #FF5656 
+/* Color Palette
+   Red :  #FF5656 
    Slate : #EDF2F6
    Blue : #6A7EFC
    Black : #494953 
 */
 
-html,body 
-{
-   height: 100%;
-   background-color:#f2f8fbe0 ;
-}
-a
-{
-   text-decoration: none;
-   color:#494953;
-   user-select: none;
+/* Set the height of html and body to 100% and define background color */
+html,
+body {
+  height: 100%;
+  background-color: #f2f8fbe0; /* Light background color */
 }
 
-p, h1, h2, h3, h4, h5, h6, img
-{
-   user-select: none;
+/* Link styles */
+a {
+  text-decoration: none; /* Remove underline from links */
+  color: #494953; /* Set link color to dark gray */
+  user-select: none; /* Prevent text selection on links */
 }
 
-.bg-slate
-{
-   background-color: #f8fbfd !important;
+/* Disable text selection for certain elements */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img {
+  user-select: none; /* Prevent text selection */
 }
 
-.nav-link:hover
-{
-   background-color:#49495314;
-}
-.active
-{
-   background-color:#c9e8ff  ;
+/* Set background color for elements with the class 'bg-slate' */
+.bg-slate {
+  background-color: #f8fbfd !important; /* Light slate background */
 }
 
-.content-area
-{
-   background-color: white; 
-   overflow-y: scroll; 
-   border-radius: 20px;
+/* Change background color of nav-links on hover */
+.nav-link:hover {
+  background-color: #49495314; /* Light gray background on hover */
 }
 
-.file-list-tile
-{
-   width: 60%;
-   border-bottom: 1px solid #494953b3;
-}
-.file-list-tile:hover
-{
-   background-color:#f2f9ff ;
+/* Active class for currently selected links */
+.active {
+  background-color: #c9e8ff; /* Light blue background for active link */
 }
 
-.file-tile{
-   margin-bottom:1rem;
-}
-.file-tile:hover
-{
-   background-color: #f2f9ff !important;
-   border: 0.1px solid #c9e8ff;
-}
-.button:hover
-{
-   background-color:#00000016;
-   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
-
-}
-.file-tile > div
-{
-   width:165px;
-}
-.file-tile > div > a > p
-{
-   max-width:100px;
-   text-wrap: nowrap;
-   overflow-x: hidden;
-}
-.page-title
-{
-   font-size:x-large;
-   width:fit-content;
-   padding: 0.4rem 1.2rem;
-   font-weight:500;
-   margin-bottom:1rem;
-   background-color: #f8fbfd;
-   transition: 0.2s ease; 
+/* Content area styles */
+.content-area {
+  background-color: white; /* White background for content area */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  border-radius: 20px; /* Rounded corners */
 }
 
-.page-title:hover
-{
-   background-color: #e5f4ff;
+/* Styles for file list tiles */
+.file-list-tile {
+  width: 60%; /* Set width of file list tiles */
+  border-bottom: 1px solid #494953b3; /* Bottom border with slight transparency */
 }
 
-.favourites-tile
-{  
-   min-width: 23.5%;
-   margin-right:0.5rem;
-   background-color: #f8fbfd;
-   padding-left:1.2rem;
-   padding-right:1.2rem;
-   padding-top:1.2rem;
-   padding-bottom:1.2rem;
-   display: flex;
-   margin-bottom:1rem;
+/* Change background color of file list tiles on hover */
+.file-list-tile:hover {
+  background-color: #f2f9ff; /* Light blue background on hover */
 }
 
-.favourites-tile:hover
-{
-   background-color:#f2f9ff ; 
-   border: 0.1px solid #c9e8ff;
+/* File tile styles */
+.file-tile {
+  margin-bottom: 1rem; /* Space below each file tile */
 }
 
-.folder-tile
-{  
-   display: flex;
-   flex-direction: column;
-   border-radius: 1rem;
-   background-color: #f8fbfd;
-   padding: 1rem 1.5rem;
-   margin-bottom: 2rem;
-   margin-top: 1rem;
-   height: fit-content;
+/* Change background color of file tiles on hover */
+.file-tile:hover {
+  background-color: #f2f9ff !important; /* Light blue background on hover */
+  border: 0.1px solid #c9e8ff; /* Add a light blue border */
 }
 
-.folder-tile:hover
-{
-   background-color:#f2f9ff ; 
-   border: 0.1px solid #c9e8ff;
+/* Button hover effects */
+.button:hover {
+  background-color: #00000016; /* Very light black background on hover */
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow effect */
 }
 
-.folder-locator
-{
-   padding-left: 0.9rem;
-   padding-right: 0.9rem;
-   padding-top: 0.4rem;
-   padding-bottom: 0.4rem;
-   border-radius: 1rem;
-   background-color: #f8fbfd;
-   font-weight: 500;
-   width: fit-content;
-   margin-top: 0.3rem;
+/* Set width for the inner div of file tiles */
+.file-tile > div {
+  width: 165px; /* Fixed width for the inner div */
 }
 
-.folder-locator:hover
-{
-   background-color: #e5f4ff;
-}
-.folder-view-container{
-}
-.folder-list-container{
+/* Set styles for paragraph inside anchor tags in file tiles */
+.file-tile > div > a > p {
+  max-width: 100px; /* Maximum width for the text */
+  text-wrap: nowrap; /* Prevent text wrapping */
+  overflow-x: hidden; /* Hide overflow text */
 }
 
+/* Styles for page title */
+.page-title {
+  font-size: x-large; /* Large font size */
+  width: fit-content; /* Fit content width */
+  padding: 0.4rem 1.2rem; /* Padding for spacing */
+  font-weight: 500; /* Medium font weight */
+  margin-bottom: 1rem; /* Margin below the title */
+  background-color: #f8fbfd; /* Light slate background */
+  transition: 0.2s ease; /* Smooth transition effect */
+}
 
+/* Change background color of page title on hover */
+.page-title:hover {
+  background-color: #e5f4ff; /* Light blue background on hover */
+}
+
+/* Styles for favorites tile */
+.favourites-tile {
+  min-width: 23.5%; /* Minimum width for favorites tile */
+  margin-right: 0.5rem; /* Right margin */
+  background-color: #f8fbfd; /* Light slate background */
+  padding: 1.2rem; /* Uniform padding */
+  display: flex; /* Flexbox for layout */
+  margin-bottom: 1rem; /* Margin below favorites tile */
+}
+
+/* Change background color of favorites tile on hover */
+.favourites-tile:hover {
+  background-color: #f2f9ff; /* Light blue background on hover */
+  border: 0.1px solid #c9e8ff; /* Add a light blue border */
+}
+
+/* Styles for folder tile */
+.folder-tile {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Arrange items in a column */
+  border-radius: 1rem; /* Rounded corners */
+  background-color: #f8fbfd; /* Light slate background */
+  padding: 1rem 1.5rem; /* Padding for spacing */
+  margin-bottom: 2rem; /* Margin below folder tile */
+  margin-top: 1rem; /* Margin above folder tile */
+  height: fit-content; /* Adjust height based on content */
+}
+
+/* Change background color of folder tile on hover */
+.folder-tile:hover {
+  background-color: #f2f9ff; /* Light blue background on hover */
+  border: 0.1px solid #c9e8ff; /* Add a light blue border */
+}
+
+/* Styles for folder locator */
+.folder-locator {
+  padding: 0.4rem 0.9rem; /* Padding for spacing */
+  border-radius: 1rem; /* Rounded corners */
+  background-color: #f8fbfd; /* Light slate background */
+  font-weight: 500; /* Medium font weight */
+  width: fit-content; /* Fit content width */
+  margin-top: 0.3rem; /* Margin above folder locator */
+}
+
+/* Change background color of folder locator on hover */
+.folder-locator:hover {
+  background-color: #e5f4ff; /* Light blue background on hover */
+}
+
+/* Empty classes for potential future use */
+.folder-view-container {
+}
+.folder-list-container {
+}
+
+/* Media query for responsive design */
 @media (max-width: 768px) {
-   .content-area
-   {
-      border-radius: 0px;
-      overflow-y: scroll !important; 
-   }
-   .file-list-tile
-   {
-      width: 90%;
-      border-bottom: 1px solid #494953b3;
-   }
-   .file-tile > div > a > p
-   {
-      max-width:80px;
-      text-wrap: nowrap;
-      overflow-x: hidden;
-   }
-   .file-tile > div
-   {
-      width:145px;
-   }
-   .favourites-tile
-   {
-      width:95%;
-   }
-   .items-space
-   {
-      justify-items: left;
-   }
- }
+  .content-area {
+    border-radius: 0px; /* Remove border radius on smaller screens */
+    overflow-y: scroll !important; /* Ensure scrolling is enabled */
+  }
+  .file-list-tile {
+    width: 90%; /* Wider file list tiles on smaller screens */
+    border-bottom: 1px solid #494953b3; /* Maintain border style */
+  }
+  .file-tile > div > a > p {
+    max-width: 80px; /* Adjust maximum width for text */
+    text-wrap: nowrap; /* Prevent text wrapping */
+    overflow-x: hidden; /* Hide overflow text */
+  }
+  .file-tile > div {
+    width: 145px; /* Adjust width for the inner div */
+  }
+  .favourites-tile {
+    width: 95%; /* Wider favorites tile on smaller screens */
+  }
+  .items-space {
+    justify-items: left; /* Align items to the left */
+  }
+}
+
+/* tiles fix*/
+.favourites-tile {
+  min-width: 23.5%; /* Original width for desktop and large screens */
+  margin-right: 0.5rem; /* Right margin */
+  background-color: #f8fbfd; /* Light slate background */
+  padding: 1.2rem; /* Uniform padding */
+  display: flex; /* Flexbox for layout */
+  margin-bottom: 1rem; /* Margin below favourites tile */
+  border-radius: 10px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding and border in element's width and height */
+}
+
+/* Hover effect */
+.favourites-tile:hover {
+  background-color: #f2f9ff; /* Light blue background on hover */
+  border: 0.1px solid #c9e8ff; /* Light blue border */
+}
+
+/* Responsive design for medium screens (tablets or smaller) */
+@media (max-width: 992px) {
+  .favourites-tile {
+    width: 48%; /* Switch to 2 columns on medium screens */
+    margin-right: 2%; /* Small gap between tiles */
+  }
+}
+
+/* Responsive design for smaller screens (Mobile) */
+@media (max-width: 768px) {
+  .favourites-tile {
+    width: 48%; /* 2-column layout for mobile */
+    margin-right: 1%; /* Small gap between tiles */
+  }
+}
+
+/* Full width on very small screens (mobile portrait mode) */
+@media (max-width: 480px) {
+  .favourites-tile {
+    width: 100%; /* Full width for small screens */
+    margin-right: 0; /* Remove right margin on narrow screens */
+  }
+}
