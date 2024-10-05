@@ -236,9 +236,9 @@ img {
 .search-container {
   display: flex;
   align-items: center; /* Vertically center items */
-  justify-content: space-between; /* Make sure search and buttons take up full width */
+  justify-content: center; /* Make sure search and buttons take up full width */
   padding: 10px;
-  background-color: #f3f4f6;
+  /* background-color: #f3f4f6; */
   border-radius: 50px;
 }
 
@@ -248,7 +248,7 @@ img {
   align-items: center; /* Center the icon and input text */
   /* flex-grow: 0.5; Allows search box to grow and take more space */
   margin-right: 15px;
-  background-color: #e5e7eb;
+  background-color: #e1e4e9;
   padding: 8px;
   border-radius: 50px;
   width: 50%;
@@ -259,6 +259,7 @@ img {
   background-color: transparent;
   outline: none;
   padding: 8px;
+  align-items: center;
   /* flex-grow: 0.5; */
   width: 100%;
 }
@@ -267,21 +268,28 @@ img {
   background-color: transparent;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
 }
 
 /* App buttons styling */
+.appButtonsContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+  margin-right: 10px;
+}
 .app-buttons {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 
 .app-buttons i,
 .app-buttons img {
   margin-left: 15px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 25px;
 }
 
 /* Image (profile picture) styling */
@@ -295,12 +303,18 @@ img {
 @media (max-width: 600px) {
   .search-box input {
     font-size: 14px;
+    width: 100%;
+  }
+  .search-box {
+    width: 85%;
+    margin-bottom: 10px;
   }
 
   .app-buttons i,
   .app-buttons img {
     margin-left: 10px;
-    font-size: 14px;
+    font-size: 20px;
+    margin-bottom: 5px;
   }
 
   .search-container {
