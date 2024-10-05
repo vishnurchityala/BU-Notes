@@ -49,7 +49,26 @@
           <h5 class="fw-bold mt-2">BU Notes</h5>
         </div>
         <hr />
-
+        <button
+          style="
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            padding: 10px 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-bottom: 10px;
+          "
+          onmouseover="this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1.05)';"
+          onmouseout="this.style.backgroundColor='white'; this.style.transform='scale(1)';"
+        >
+          <span style="font-size: 24px; margin-right: 5px">+</span>
+          <strong>New</strong>
+        </button>
         <!-- Navigation Links for Sidebar -->
         <div class="d-flex flex-column flex-fill">
           <!-- Home link -->
@@ -106,7 +125,27 @@
             <i class="fa-solid fa-bars" style="font-size: 25px"></i>
           </a>
           <span class="ms-3 fw-bold">BU Notes</span>
+
+          <button
+            style="
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              background-color: white;
+              border: 1px solid lightgray;
+              border-radius: 10px;
+              padding: 10px 20px;
+              font-size: 16px;
+              cursor: pointer;
+              transition: background-color 0.3s ease, transform 0.3s ease;
+            "
+            onmouseover="this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1.05)';"
+            onmouseout="this.style.backgroundColor='white'; this.style.transform='scale(1)';"
+          >
+            <span style="font-size: 24px; margin-right: 5px">+</span> New
+          </button>
         </div>
+
         <!-- Add the search bar and app buttons here -->
         <div class="sea">
           <div class="search-container">
