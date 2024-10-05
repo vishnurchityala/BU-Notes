@@ -104,7 +104,7 @@ img {
 .sea {
   display: flex;
   width: 100%;
-  padding: 0 var(--spacing-xxl);
+  padding: 0 var(--spacing-md);
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
@@ -112,7 +112,7 @@ img {
 }
 
 .search-container {
-  width: 50%;
+  width: 60%;
   min-width: 300px; /* Minimum width for search container */
 }
 
@@ -149,6 +149,7 @@ img {
   display: flex;
   align-items: center;
   flex-shrink: 0; /* Prevent container from shrinking */
+  margin-right: var(--spacing-md);
 }
 
 .app-buttons {
