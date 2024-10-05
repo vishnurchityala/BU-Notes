@@ -1,242 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Meta Tags: Define document's character set and responsive design -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BU Notes</title>
 
     <!-- Link to Bootstrap CSS for responsive design and pre-built components -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
 
     <!-- Font Awesome for icons used throughout the page -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- Link to custom stylesheet for further design customization -->
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <!-- Main container for the entire layout (Bootstrap Fluid Container) -->
     <div class="container-fluid p-0 d-flex h-100">
-        
-        <!-- Sidebar: Vertical navigation and information area -->
-        <div class="d-flex flex-column flex-shrink-0 px-4 py-3 offcanvas-md offcanvas-start"  style="width:250px;" id="sideBar">
-            
-            <!-- Header of Sidebar: Displays logo and app title -->
-            <div class="d-flex">
-                <!-- App logo on the left side -->
-                <span><img src="./img/think-out-of-the-box.png" width="36px" class="me-3" alt="App Logo"></span>
-                <!-- App title next to the logo -->
-                <h5 class="fw-bold mt-2">BU Notes</h5>
-            </div>
-            <hr>
-
-            <!-- Navigation Links for Sidebar -->
-            <div class="d-flex flex-column flex-fill">
-                <!-- Home link -->
-                <a href="" class="px-2 py-1 mb-1 rounded-pill nav-link active">
-                    <p class="m-0"><i class="fa fa-home me-2" aria-hidden="true"></i>Home</p>
-                </a>
-                <!-- 1st Year link -->
-                <a href="./pages/firstYear.html" class="px-2 py-1 mb-1 rounded-pill nav-link">
-                    <p class="m-0"><i class="fa-solid fa-graduation-cap me-2"></i>1st Year</p>
-                </a>
-                <!-- Video Lectures link -->
-                <a href="./pages/videoLectures.html" class="px-2 py-1 mb-1 rounded-pill nav-link">
-                    <p class="m-0"><i class="fa-solid fa-film me-2" aria-hidden="true"></i>Video Lectures</p>
-                </a>
-                <!-- Info page link -->
-                <a href="./pages/info.html" class="px-2 py-1 mb-1 rounded-pill nav-link">
-                    <p class="m-0"><i class="fa-solid fa-circle-info me-2"></i>Info</p>
-                </a>
-                <!-- Grievances page link -->
-                <a href="" class="px-2 py-1 mb-1 rounded-pill nav-link">
-                    <p class="m-0"><i class="fa-solid fa-paper-plane me-2"></i>Grievances</p>
-                </a>
-            </div>
+      <!-- Sidebar: Vertical navigation and information area -->
+      <div
+        class="d-flex flex-column flex-shrink-0 px-4 py-3 offcanvas-md offcanvas-start"
+        style="width: 250px"
+        id="sideBar"
+      >
+        <!-- Header of Sidebar: Displays logo and app title -->
+        <div class="d-flex">
+          <!-- App logo on the left side -->
+          <span
+            ><img
+              src="./img/think-out-of-the-box.png"
+              width="36px"
+              class="me-3"
+              alt="App Logo"
+          /></span>
+          <!-- App title next to the logo -->
+          <h5 class="fw-bold mt-2">BU Notes</h5>
         </div>
+        <hr />
 
-        <!-- Main content area -->
-        <div class="flex-fill d-flex flex-column space-between">
-            <!-- Responsive Navbar for smaller screens (collapsible menu) -->
-            <div class="p-3 py-3 d-md-none d-flex text-white bg-dark">
-                <a href="" class="text-white" data-bs-toggle="offcanvas" data-bs-target="#sideBar">
-                    <i class="fa-solid fa-bars" style="font-size: 25px;"></i>
-                </a>
-                <span class="ms-3 fw-bold">BU Notes</span>
-            </div>
-            <!-- Main content area where the assets (notes, videos) are displayed -->
-            <div class="flex-fill ms-md-2 me-md-3 mt-md-4 mb-md-4 content-area py-4 px-1">
-
-                <!-- Page header -->
-                <p class="page-title rounded-pill ms-2">Home page</p>
-
-                <!-- Favourites section where pinned/favorite content is displayed -->
-                <h6 class="ms-4 ms-md-6 mb-3">Favourites</h6>
-                <div class="d-flex flex-wrap ms-2 ms-md-4 mb-2 mt-2" style="justify-items: flex-start;justify-content: space-between; padding-right:1rem;">
-                    <!-- Favourites Tile: Example content for previous papers -->
-                    <a href="" class="favourites-tile rounded-4">
-                        <div class="bg-white p-3 rounded-3 me-2">
-                            <img src="./img/archive.png" width="30px" alt="">
-                        </div>
-                        <div>
-                            <p style="font-size: large;font-weight: 500;margin: 0px;line-height: normal;text-wrap:balance;">Previous Papers</p>
-                            <p style="font-size: small;margin-top: 0.2rem;">159 items</p>
-                        </div>    
-                    </a>
-                    <a href="" class="favourites-tile rounded-4">
-                        <div class="bg-white p-3 rounded-3 me-2">
-                            <img src="./img/light-bulb.png" width="30px" alt="">
-                        </div>
-                        <div>
-                            <p style="font-size: large;font-weight: 500;margin: 0px;line-height: normal;">Topper's Notes</p>
-                            <p style="font-size: small;margin-top: 0.2rem;">159 items</p>
-                        </div>    
-                    </a>
-                    <a href="" class="favourites-tile rounded-4">
-                        <div class="bg-white p-3 rounded-3 me-2">
-                            <img src="./img/youtube.png" width="30px" alt="">
-                        </div>
-                        <div>
-                            <p style="font-size: large;font-weight: 500;margin: 0px;line-height: normal;">Video Lectures</p>
-                            <p style="font-size: small;margin-top: 0.2rem;">159 items</p>
-                        </div>    
-                    </a>
-                    <a href="" class="favourites-tile rounded-4">
-                        <div class="bg-white p-3 rounded-3 me-2">
-                            <img src="./img/paper.png" width="30px" alt="">
-                        </div>
-                        <div>
-                            <p style="font-size: large;font-weight: 500;margin: 0px;line-height: normal;">Formula Sheets</p>
-                            <p style="font-size: small;margin-top: 0.2rem;">159 items</p>
-                        </div>    
-                    </a>
-                </div>
-                <!-- Suggested items section -->
-                <h6 class="ms-4 ms-md-6 mb-3">Suggested</h6>
-                <div class="d-flex flex-wrap gap-1 gap-md-2 ms-md-4" style="justify-items: flex-start;">
-                    <!-- Suggested file tile -->
-                    <div class="bg-slate rounded-4 p-2 pb-3 file-tile ms-2 m-md-1 file-tile">
-                        <div class="m-0 d-flex p-2 gap-1 align-items-center">
-                            <a href="" data-bs-toggle="tooltip" title="DMS All slidesaaaaaaaaaajjjjjjaaaaaaaa" class="d-flex gap-2 align-items-center">
-                                <p class="m-0 fw-semibold" style="font-size: small;" >DMS All slidesaaaaaaaaaajjjjjjaaaaaaaa</p>
-                            </a>
-                        <a href="" class="ms-auto d-flex button p-2 rounded-pill">
-                            <i class="fa fa-download" aria-hidden="true"></i>
-                        </a>
-                        </div>
-                        <a href="">
-                            <div class="rounded-4 bg-white py-5 py-md-5 d-flex justify-content-center">
-                                <img src="./img/pdf.png" width="40px" alt="">
-                            </div>
-                        </a>
-                    </div> 
-                    <div class="bg-slate rounded-4 p-2 pb-3 file-tile ms-2 m-md-1 file-tile">
-                        <div class="m-0 d-flex p-2 gap-1 align-items-center">
-                            <a href="" data-bs-toggle="tooltip" title="DMS All slidesaaaaaaaaaajjjjjjaaaaaaaa" class="d-flex gap-2 align-items-center">
-                                <p class="m-0 fw-semibold" style="font-size: small;">DMS All slidesaaaaaaaaaaaaaaaaaajjnjjnjj</p>
-                            </a>
-                        <a href="" class="ms-auto d-flex button p-2 rounded-pill">
-                            <i class="fa fa-download" aria-hidden="true"></i>
-                        </a>
-                        </div>
-                        <a href="">
-                            <div class="rounded-4 bg-white py-5 py-md-5 d-flex justify-content-center">
-                                <img src="./img/pdf.png" width="40px" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="bg-slate rounded-4 p-2 pb-3 file-tile ms-2 m-md-1 file-tile">
-                        <div class="m-0 d-flex p-2 gap-1 align-items-center">
-                            <a href="" data-bs-toggle="tooltip" title="DMS All slidesaaaaaaaaaajjjjjjaaaaaaaa" class="d-flex gap-2 align-items-center">
-                                <p class="m-0 fw-semibold" style="font-size: small;">DMS All slidesaaaaaaaaaaaaaaaaaajjnjjnjj</p>
-                            </a>
-                        <a href="" class="ms-auto d-flex button p-2 rounded-pill">
-                            <i class="fa fa-download" aria-hidden="true"></i>
-                        </a>
-                        </div>
-                        <a href="">
-                            <div class="rounded-4 bg-white py-5 py-md-5 d-flex justify-content-center">
-                                <img src="./img/pdf.png" width="40px" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="bg-slate rounded-4 p-2 pb-3 file-tile ms-2 m-md-1 file-tile">
-                        <div class="m-0 d-flex p-2 gap-1 align-items-center">
-                            <a href="" data-bs-toggle="tooltip" title="DMS All slidesaaaaaaaaaajjjjjjaaaaaaaa" class="d-flex gap-2 align-items-center">
-                                <p class="m-0 fw-semibold" style="font-size: small;">DMS All slidesaaaaaaaaaaaaaaaaaajjnjjnjj</p>
-                            </a>
-                        <a href="" class="ms-auto d-flex button p-2 rounded-pill">
-                            <i class="fa fa-download" aria-hidden="true"></i>
-                        </a>
-                        </div>
-                        <a href="">
-                            <div class="rounded-4 bg-white py-5 py-md-5 d-flex justify-content-center">
-                                <img src="./img/pdf.png" width="40px" alt="">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="bg-slate rounded-4 p-2 pb-3 file-tile ms-2 m-md-1 file-tile">
-                        <div class="m-0 d-flex p-2 gap-1 align-items-center">
-                            <a href="" data-bs-toggle="tooltip" title="DMS All slidesaaaaaaaaaajjjjjjaaaaaaaa" class="d-flex gap-2 align-items-center">
-                                <p class="m-0 fw-semibold" style="font-size: small;">DMS All slidesaaaaaaaaaaaaaaaaaajjnjjnjj</p>
-                            </a>
-                        <a href="" class="ms-auto d-flex button p-2 rounded-pill">
-                            <i class="fa fa-download" aria-hidden="true"></i>
-                        </a>
-                        </div>
-                        <a href="">
-                            <div class="rounded-4 bg-white py-5 py-md-5 d-flex justify-content-center">
-                                <img src="./img/pdf.png" width="40px" alt="">
-                            </div>
-                        </a>
-                    </div> 
-                    <div class="bg-slate rounded-4 p-2 pb-3 file-tile ms-2 m-md-1 file-tile">
-                        <div class="m-0 d-flex p-2 gap-1 align-items-center">
-                            <a href="" data-bs-toggle="tooltip" title="DMS All slidesaaaaaaaaaajjjjjjaaaaaaaa" class="d-flex gap-2 align-items-center">
-                                <p class="m-0 fw-semibold" style="font-size: small;">DMS All slidesaaaaaaaaaaaaaaaaaajjnjjnjj</p>
-                            </a>
-                        <a href="" class="ms-auto d-flex button p-2 rounded-pill">
-                            <i class="fa fa-download" aria-hidden="true"></i>
-                        </a>
-                        </div>
-                        <a href="">
-                            <div class="rounded-4 bg-white py-5 py-md-5 d-flex justify-content-center">
-                                <img src="./img/pdf.png" width="40px" alt="">
-                            </div>
-                        </a>
-                    </div>               
-                </div> 
-                
-                <!-- Recently added items section -->
-                <h6 class="ms-4 ms-md-6 mt-4 mb-3">Recently Added</h6>
-                <div class="ps-2 ps-md-0 pe-3 pe-md-0 d-flex flex-column ms-4">
-                    <!-- File list item -->
-                    <div class="ms-2 py-2 px-3 d-flex file-list-tile">
-                        <a href="" class="d-flex gap-2 align-items-center flex-fill">
-                            <img src="./img/pdf.png" width="18px" style="margin: 0px;" alt="">
-                            <p class="m-0 fw-semibold" style="font-size: small;">DMS All slides</p>
-                        </a>
-                        <a href="" class="ms-auto d-flex button p-2 rounded-pill">
-                            <i class="fa fa-download" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <!-- file list item tile -->
-                    <div class="ms-2 py-2 px-3 d-flex file-list-tile">
-                        <a href="" class="d-flex gap-2 align-items-center flex-fill">
-                            <img src="./img/pdf.png" width="18px" style="margin: 0px;" alt="">
-                            <p class="m-0 fw-semibold" style="font-size: small;">DMS All slides</p>
-                        </a>
-                        <a href="" class="ms-auto d-flex button p-2 rounded-pill">
-                            <i class="fa fa-download" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <!-- Navigation Links for Sidebar -->
+        <div class="d-flex flex-column flex-fill">
+          <!-- Home link -->
+          <a href="" class="px-2 py-1 mb-1 rounded-pill nav-link active">
+            <p class="m-0">
+              <i class="fa fa-home me-2" aria-hidden="true"></i>Home
+            </p>
+          </a>
+          <!-- 1st Year link -->
+          <a
+            href="./pages/firstYear.html"
+            class="px-2 py-1 mb-1 rounded-pill nav-link"
+          >
+            <p class="m-0">
+              <i class="fa-solid fa-graduation-cap me-2"></i>1st Year
+            </p>
+          </a>
+          <!-- Video Lectures link -->
+          <a
+            href="./pages/videoLectures.html"
+            class="px-2 py-1 mb-1 rounded-pill nav-link"
+          >
+            <p class="m-0">
+              <i class="fa-solid fa-film me-2" aria-hidden="true"></i>Video
+              Lectures
+            </p>
+          </a>
+          <!-- Info page link -->
+          <a
+            href="./pages/info.html"
+            class="px-2 py-1 mb-1 rounded-pill nav-link"
+          >
+            <p class="m-0"><i class="fa-solid fa-circle-info me-2"></i>Info</p>
+          </a>
+          <!-- Grievances page link -->
+          <a href="" class="px-2 py-1 mb-1 rounded-pill nav-link">
+            <p class="m-0">
+              <i class="fa-solid fa-paper-plane me-2"></i>Grievances
+            </p>
+          </a>
         </div>
+      </div>
+
+      <!-- Main content area -->
+      <div class="flex-fill d-flex flex-column space-between">
+        <!-- Responsive Navbar for smaller screens (collapsible menu) -->
+        <div class="p-3 py-3 d-md-none d-flex text-white bg-dark">
+          <a
+            href=""
+            class="text-white"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#sideBar"
+          >
+            <i class="fa-solid fa-bars" style="font-size: 25px"></i>
+          </a>
+          <span class="ms-3 fw-bold">BU Notes</span>
+        </div>
+        <!-- Main content area where the assets (notes, videos) are displayed -->
+        <div
+          class="flex-fill ms-md-2 me-md-3 mt-md-4 mb-md-4 content-area py-4 px-1"
+        >
+          <!-- Add the search bar and app buttons here -->
+          <div class="search-container">
+            <div class="search-box">
+              <input type="text" placeholder="Search in Drive" />
+              <button><i class="fas fa-sliders-h"></i></button>
+            </div>
+            <div class="app-buttons">
+              <i class="fas fa-question-circle"></i>
+              <i class="fas fa-cog"></i>
+              <i class="fas fa-th"></i>
+              <img src="./img/profile.png" alt="Profile Picture" />
+            </div>
+          </div>
+          <!-- Page header -->
+          <p class="page-title rounded-pill ms-2">Home page</p>
+
+          <!-- Favourites section where pinned/favorite content is displayed -->
+          <h6 class="ms-4 ms-md-6 mb-3">Favourites</h6>
+          <div
+            class="d-flex flex-wrap ms-2 ms-md-4 mb-2 mt-2"
+            style="
+              justify-items: flex-start;
+              justify-content: space-between;
+              padding-right: 1rem;
+            "
+          >
+            <!-- Favourites Tile: Example content for previous papers -->
+            <a href="" class="favourites-tile rounded-4">
+              <div class="bg-white p-3 rounded-3 me-2">
+                <img src="./img/archive.png" width="30px" alt="" />
+              </div>
+              <div>
+                <p
+                  style="
+                    font-size: large;
+                    font-weight: 500;
+                    margin: 0px;
+                    line-height: normal;
+                    text-wrap: balance;
+                  "
+                >
+                  Previous Papers
+                </p>
+                <p style="font-size: small; margin-top: 0.2rem">159 items</p>
+              </div>
+            </a>
+            <a href="" class="favourites-tile rounded-4">
+              <div class="bg-white p-3 rounded-3 me-2">
+                <img src="./img/light-bulb.png" width="30px" alt="" />
+              </div>
+              <div>
+                <p
+                  style="
+                    font-size: large;
+                    font-weight: 500;
+                    margin: 0px;
+                    line-height: normal;
+                  "
+                >
+                  Topper's Notes
+                </p>
+                <p style="font-size: small; margin-top: 0.2rem">159 items</p>
+              </div>
+            </a>
+            <a href="" class="favourites-tile rounded-4">
+              <div class="bg-white p-3 rounded-3 me-2">
+                <img src="./img/youtube.png" width="30px" alt="" />
+              </div>
+              <div>
+                <p
+                  style="
+                    font-size: large;
+                    font-weight: 500;
+                    margin: 0px;
+                    line-height: normal;
+                  "
+                >
+                  Video Lectures
+                </p>
+                <p style="font-size: small; margin-top: 0.2rem">159 items</p>
+              </div>
+            </a>
+            <a href="" class="favourites-tile rounded-4">
+              <div class="bg-white p-3 rounded-3 me-2">
+                <img src="./img/paper.png" width="30px" alt="" />
+              </div>
+              <div>
+                <p
+                  style="
+                    font-size: large;
+                    font-weight: 500;
+                    margin: 0px;
+                    line-height: normal;
+                  "
+                >
+                  Formula Sheets
+                </p>
+                <p style="font-size: small; margin-top: 0.2rem">159 items</p>
+              </div>
+            </a>
+          </div>
+          <!-- Suggested items section -->
+          <h6 class="ms-4 ms-md-6 mb-3">Suggested</h6>
+          <div
+            class="d-flex flex-wrap gap-1 gap-md-2 ms-md-4"
+            style="justify-items: flex-start"
+          >
+            <!-- Suggested file tile -->
+            <div
+              class="bg-slate rounded-4 p-2 pb-3 file-tile ms-2 m-md-1 file-tile"
+            >
+              <div class="m-0 d-flex p-2 gap-1 align-items-center">
+                <a
+                  href=""
+                  data-bs-toggle="tooltip"
+                  title="DMS All slidesaaaaaaaaaajjjjjjaaaaaaaa"
+                  class="d-flex gap-2 align-items-center"
+                >
+                  <p class="m-0 fw-semibold" style="font-size: small">
+                    DMS All slidesaaaaaaaaaajjjjjjaaaaaaaa
+                  </p>
+                </a>
+                <a href="" class="ms-auto d-flex button p-2 rounded-pill">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </a>
+              </div>
+              <a href="">
+                <div
+                  class="rounded-4 bg-white py-5 py-md-5 d-flex justify-content-center"
+                >
+                  <img src="./img/pdf.png" width="40px" alt="" />
+                </div>
+              </a>
+            </div>
+            <div
+              class="bg-slate rounded-4 p-2 pb-3 file-tile ms-2 m-md-1 file-tile"
+            >
+              <div class="m-0 d-flex p-2 gap-1 align-items-center">
+                <a
+                  href=""
+                  data-bs-toggle="tooltip"
+                  title="DMS All slidesaaaaaaaaaajjjjjjaaaaaaaa"
+                  class="d-flex gap-2 align-items-center"
+                >
+                  <p class="m-0 fw-semibold" style="font-size: small">
+                    DMS All slidesaaaaaaaaaaaaaaaaaajjnjjnjj
+                  </p>
+                </a>
+                <a href="" class="ms-auto d-flex button p-2 rounded-pill">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </a>
+              </div>
+              <a href="">
+                <div
+                  class="rounded-4 bg-white py-5 py-md-5 d-flex justify-content-center"
+                >
+                  <img src="./img/pdf.png" width="40px" alt="" />
+                </div>
+              </a>
+            </div>
+            <div
+              class="bg-slate rounded-4 p-2 pb-3 file-tile ms-2 m-md-1 file-tile"
+            >
+              <div class="m-0 d-flex p-2 gap-1 align-items-center">
+                <a
+                  href=""
+                  data-bs-toggle="tooltip"
+                  title="DMS All slidesaaaaaaaaaajjjjjjaaaaaaaa"
+                  class="d-flex gap-2 align-items-center"
+                >
+                  <p class="m-0 fw-semibold" style="font-size: small">
+                    DMS All slidesaaaaaaaaaaaaaaaaaajjnjjnjj
+                  </p>
+                </a>
+                <a href="" class="ms-auto d-flex button p-2 rounded-pill">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </a>
+              </div>
+              <a href="">
+                <div
+                  class="rounded-4 bg-white py-5 py-md-5 d-flex justify-content-center"
+                >
+                  <img src="./img/pdf.png" width="40px" alt="" />
+                </div>
+              </a>
+            </div>
+            <div
+              class="bg-slate rounded-4 p-2 pb-3 file-tile ms-2 m-md-1 file-tile"
+            >
+              <div class="m-0 d-flex p-2 gap-1 align-items-center">
+                <a
+                  href=""
+                  data-bs-toggle="tooltip"
+                  title="DMS All slidesaaaaaaaaaajjjjjjaaaaaaaa"
+                  class="d-flex gap-2 align-items-center"
+                >
+                  <p class="m-0 fw-semibold" style="font-size: small">
+                    DMS All slidesaaaaaaaaaaaaaaaaaajjnjjnjj
+                  </p>
+                </a>
+                <a href="" class="ms-auto d-flex button p-2 rounded-pill">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </a>
+              </div>
+              <a href="">
+                <div
+                  class="rounded-4 bg-white py-5 py-md-5 d-flex justify-content-center"
+                >
+                  <img src="./img/pdf.png" width="40px" alt="" />
+                </div>
+              </a>
+            </div>
+            <div
+              class="bg-slate rounded-4 p-2 pb-3 file-tile ms-2 m-md-1 file-tile"
+            >
+              <div class="m-0 d-flex p-2 gap-1 align-items-center">
+                <a
+                  href=""
+                  data-bs-toggle="tooltip"
+                  title="DMS All slidesaaaaaaaaaajjjjjjaaaaaaaa"
+                  class="d-flex gap-2 align-items-center"
+                >
+                  <p class="m-0 fw-semibold" style="font-size: small">
+                    DMS All slidesaaaaaaaaaaaaaaaaaajjnjjnjj
+                  </p>
+                </a>
+                <a href="" class="ms-auto d-flex button p-2 rounded-pill">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </a>
+              </div>
+              <a href="">
+                <div
+                  class="rounded-4 bg-white py-5 py-md-5 d-flex justify-content-center"
+                >
+                  <img src="./img/pdf.png" width="40px" alt="" />
+                </div>
+              </a>
+            </div>
+            <div
+              class="bg-slate rounded-4 p-2 pb-3 file-tile ms-2 m-md-1 file-tile"
+            >
+              <div class="m-0 d-flex p-2 gap-1 align-items-center">
+                <a
+                  href=""
+                  data-bs-toggle="tooltip"
+                  title="DMS All slidesaaaaaaaaaajjjjjjaaaaaaaa"
+                  class="d-flex gap-2 align-items-center"
+                >
+                  <p class="m-0 fw-semibold" style="font-size: small">
+                    DMS All slidesaaaaaaaaaaaaaaaaaajjnjjnjj
+                  </p>
+                </a>
+                <a href="" class="ms-auto d-flex button p-2 rounded-pill">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                </a>
+              </div>
+              <a href="">
+                <div
+                  class="rounded-4 bg-white py-5 py-md-5 d-flex justify-content-center"
+                >
+                  <img src="./img/pdf.png" width="40px" alt="" />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Recently added items section -->
+          <h6 class="ms-4 ms-md-6 mt-4 mb-3">Recently Added</h6>
+          <div class="ps-2 ps-md-0 pe-3 pe-md-0 d-flex flex-column ms-4">
+            <!-- File list item -->
+            <div class="ms-2 py-2 px-3 d-flex file-list-tile">
+              <a href="" class="d-flex gap-2 align-items-center flex-fill">
+                <img
+                  src="./img/pdf.png"
+                  width="18px"
+                  style="margin: 0px"
+                  alt=""
+                />
+                <p class="m-0 fw-semibold" style="font-size: small">
+                  DMS All slides
+                </p>
+              </a>
+              <a href="" class="ms-auto d-flex button p-2 rounded-pill">
+                <i class="fa fa-download" aria-hidden="true"></i>
+              </a>
+            </div>
+            <!-- file list item tile -->
+            <div class="ms-2 py-2 px-3 d-flex file-list-tile">
+              <a href="" class="d-flex gap-2 align-items-center flex-fill">
+                <img
+                  src="./img/pdf.png"
+                  width="18px"
+                  style="margin: 0px"
+                  alt=""
+                />
+                <p class="m-0 fw-semibold" style="font-size: small">
+                  DMS All slides
+                </p>
+              </a>
+              <a href="" class="ms-auto d-flex button p-2 rounded-pill">
+                <i class="fa fa-download" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
-<!-- Bootstrap and Popper.js scripts for enabling interactivity such as sidebar toggle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<script src="./script.js"></script>
+  </body>
+  <!-- Bootstrap and Popper.js scripts for enabling interactivity such as sidebar toggle -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./script.js"></script>
 </html>
