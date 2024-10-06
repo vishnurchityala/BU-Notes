@@ -1,30 +1,4 @@
 /* Root Variables */
-
-/* New Button Styles */
-.new-button {
-  display: inline-flex;
-  align-items: center;
-  padding: 18px 18px;
-  background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-  font-family: Arial, sans-serif;
-  font-size: 17px;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease-in-out;
-}
-.new-button:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: #EDF1FA;
-}
-.new-button span {
-  color: #333;
-  font-size: 14px;
-}
-.new-button i {
-  font-size: 34px;
-  color: #333;
-}
 :root {
   /* Colors */
   --color-red: #ff5656;
@@ -296,6 +270,32 @@ img {
 
 .folder-locator:hover {
   background-color: var(--bg-active);
+}
+
+/* New Button Styles */
+.new-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 18px 18px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.new-button:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--bg-hover-file);
+}
+.new-button span {
+  color: #333;
+  font-size: 14px;
+}
+.new-button i {
+  font-size: 34px;
+  color: #333;
 }
 
 /* Responsive Design */
