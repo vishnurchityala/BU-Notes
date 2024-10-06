@@ -4,27 +4,25 @@
 .new-button {
   display: inline-flex;
   align-items: center;
-  padding: 8px 16px;
+  padding: 18px 18px;
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
   font-size: 17px;
   cursor: pointer;
   border: 1px solid #ddd;
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s;
+  transition: box-shadow 0.3s ease-in-out;
 }
 .new-button:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .new-button span {
-  margin-left: 15px;
-  font-weight: bold;
   color: #333;
+  font-size: 14px;
 }
 .new-button i {
-  font-size: 30px;
+  font-size: 34px;
   color: #333;
 }
 :root {
