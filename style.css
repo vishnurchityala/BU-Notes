@@ -53,6 +53,14 @@
   --file-text-width: 100px;
 }
 
+.fs-small{
+  font-size: small;
+}
+
+.fs-medium{
+  font-size: medium;
+}
+
 /* Base Styles */
 html,
 body {
@@ -65,6 +73,11 @@ a {
   text-decoration: none;
   color: var(--color-black);
   user-select: none;
+}
+
+button:focus,
+button:active {
+    border: none;
 }
 
 /* Text selection prevention */
@@ -296,6 +309,38 @@ img {
 .new-button i {
   font-size: 34px;
   color: #333;
+}
+
+.progress{
+  height: 4px;
+}
+
+.progress .progress-bar{
+  background-color:rgb(12, 63, 198);
+}
+
+.more-apps{
+  background-color: var(--bg-hover-file);
+  border:none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 320px; 
+  max-height: 400px; 
+  overflow-y: scroll;
+}
+
+.icon-size {
+  width: 80px; /* Adjust based on the icon size you want */
+  height: auto;
+}
+
+.rounded-button {
+  color: #1a73e8;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+.rounded-button:hover {
+  border: 1px solid #ccc;
+  color: #1a73e8;
 }
 
 /* Responsive Design */
