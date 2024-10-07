@@ -343,6 +343,16 @@ img {
   color: #1a73e8;
 }
 
+.account-container{
+  background-color: var(--bg-hover-file);
+  border:none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 330px; 
+  max-height: 400px; 
+  overflow-y: scroll;
+  user-select: none;
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .favourites-tile {
