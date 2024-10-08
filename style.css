@@ -75,6 +75,11 @@ a {
   user-select: none;
 }
 
+a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
 button:focus,
 button:active {
     border: none;
@@ -287,6 +292,7 @@ img {
 
 /* New Button Styles */
 .new-button {
+  user-select: none;
   display: inline-flex;
   align-items: center;
   padding: 18px 18px;
@@ -298,6 +304,7 @@ img {
   cursor: pointer;
   transition: box-shadow 0.3s ease-in-out;
 }
+
 .new-button:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   background-color: var(--bg-hover-file);
@@ -309,6 +316,22 @@ img {
 .new-button i {
   font-size: 34px;
   color: #333;
+}
+
+.new-button-dropdown{
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border:none;
+  width:250px;
+  color: black;
+}
+
+.dropdown-list-item{
+  font-size: 15px;
+}
+
+.dropdown-list-item:hover{
+  background-color: #d6d6d6;
+  cursor: pointer;
 }
 
 .progress{
